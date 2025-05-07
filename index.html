@@ -1,0 +1,63 @@
+<!--john delgado -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lane Reservation Dashboard</title>
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- sidebar navigation -->
+    <aside class="sidebar">
+      <div class="logo">LaneReserve by John Delgado</div>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#lanes">Lanes</a></li>
+          <li><a href="#waitlist">Waitlist</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- main content area -->
+    <div class="main-content">
+      <!-- top bar with search -->
+      <header class="topbar">
+        <div class="search">
+          <input type="text" placeholder="Search lanes...">
+        </div>
+      </header>
+      <div class="content-wrap">
+        <!-- card showing active lanes count -->
+        <div class="cards">
+          <div class="card gradient-3">
+            <h4>Active Lanes</h4>
+            <p id="activeLanesCount">0</p>
+          </div>
+        </div>
+        <!-- controls and lane grid -->
+        <section id="lanes-section">
+          <div class="controls">
+            <label for="numLanes">Lanes:</label>
+            <input id="numLanes" type="number" min="1" max="4" value="4">
+            <button id="setLanesBtn">Apply</button>
+            <button id="reserveAllBtn">Add Reservation</button>
+          </div>
+          <div id="lanes"></div>
+        </section>
+        <!-- waitlist section -->
+        <section id="waitlist">
+          <h3>Waitlist</h3>
+          <ul id="waitlistList"></ul>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- main script -->
+  <script src="script.js"></script>
+</body>
+</html>

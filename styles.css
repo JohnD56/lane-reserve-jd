@@ -1,0 +1,126 @@
+/*john delgado*/
+/* Reset defaults */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Base fonts and background */
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: #f7f9fc;
+}
+
+/* Sidebar layout */
+.dashboard { display: flex; height: 100vh; }
+.sidebar {
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 1.5rem;
+}
+.sidebar .logo { font-size: 1.5rem; font-weight: 700; color: #0061ff; margin-bottom: 2rem; }
+.sidebar nav a { color: #555; transition: color 0.2s; }
+.sidebar nav a:hover { color: #0061ff; }
+
+/* Topbar */
+.main-content { flex: 1; display: flex; flex-direction: column; }
+.topbar {
+  height: 64px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.topbar .search input {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+}
+
+/* Cards */
+.cards { display: inline-grid; grid-template-columns: 200px; gap: 1.5rem; }
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.card h4 { font-size: 1rem; color: #888; margin-bottom: 0.5rem; }
+.card p { font-size: 1.5rem; font-weight: 500; color: #333; }
+.gradient-3 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+
+/* Controls */
+.controls {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.controls label { font-weight: 500; color: #555; }
+.controls input { width: 80px; padding: 0.5rem; border: 1px solid #ccc; border-radius: 6px; }
+.controls button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #0061ff;
+  color: #fff;
+  cursor: pointer;
+}
+.controls button:hover { background: #0050cc; }
+
+/* Lane cards */
+#lanes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 1.5rem;
+}
+.lane {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.lane.free { border: 2px dashed #8bc34a; }
+.lane.reserved { border: 2px solid #e74c3c; }
+.lane h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.lane p { font-size: 0.9rem; color: #666; margin-bottom: 0.8rem; }
+.lane .timer { font-weight: 500; margin-bottom: 0.8rem; }
+.lane button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #0061ff;
+  color: #fff;
+  cursor: pointer;
+}
+.lane button.secondary { background: #ff4757; }
+.lane button:hover { opacity: 0.9; }
+
+/* Waitlist */
+#waitlist {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+#waitlist ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+/* trash icon button */
+.waitlist-remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e74c3c;
+}
+.waitlist-remove-btn svg { vertical-align: middle; }
